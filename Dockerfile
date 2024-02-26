@@ -8,7 +8,7 @@ RUN apk update && \
     cd /usr/bin && \
     ln -s python3 python && \
     cd / && \
-    wget -qO- "https://github.com/arq5x/bedtools2/releases/download/v2.30.0/bedtools-2.30.0.tar.gz" | tar -zx && \
+    wget -qO- "https://github.com/arq5x/bedtools2/releases/download/v2.31.0/bedtools-2.31.0.tar.gz" | tar -zx && \
     cd bedtools2 && \
     make && \
     make install && \
