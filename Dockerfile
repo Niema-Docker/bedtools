@@ -1,4 +1,4 @@
-# Minimal Docker image for bedtools v2.30.0 using Alpine base
+# Minimal Docker image for bedtools using Alpine base
 FROM alpine:latest
 
 # install bedtools
