@@ -1,5 +1,5 @@
 # Minimal Docker image for bedtools v2.30.0 using Alpine base
-FROM alpine:3.13.5
+FROM alpine:latest
 
 # install bedtools
 RUN apk update && \
