@@ -1,5 +1,5 @@
-# Minimal Docker image for bedtools using Alpine base (3.20 because bedtools can't compile on newer versions of GCC)
-FROM alpine:3.20
+# Minimal Docker image for bedtools using Alpine base
+FROM alpine:latest
 
 # install bedtools
 RUN apk update && \
@@ -8,7 +8,7 @@ RUN apk update && \
     cd / && \
     wget -qO- "https://github.com/arq5x/bedtools2/releases/download/v2.31.1/bedtools-2.31.1.tar.gz" | tar -zx && \
     cd bedtools2 && \
-    make && \
+    make CXXFLAGS="-include stdint.h" && \
     make install && \
     cd .. && \
     rm -rf bedtools2
