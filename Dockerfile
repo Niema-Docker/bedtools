@@ -1,5 +1,5 @@
-# Minimal Docker image for bedtools using Alpine base
-FROM alpine:latest
+# Minimal Docker image for bedtools using Alpine base (3.20 because bedtools can't compile on newer versions of GCC)
+FROM alpine:3.20
 
 # install bedtools
 RUN apk update && \
